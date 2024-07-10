@@ -20,7 +20,10 @@ app.use('/eventos', eventosRoutes);
 
 app.get("/", (req, res)=>{
     res.send("Sociedad Protectora de Animales");
-})
+});
+
+console.log("Sociedad Protectora de Animales");
+
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
