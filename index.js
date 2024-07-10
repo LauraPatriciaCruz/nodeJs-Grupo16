@@ -1,17 +1,8 @@
 require('dotenv').config();
-
-
-
-const express = require("express");
+const express = require('express');
 const app = express();
-
-app.get("/", (req, res) => res.send("Sociedad Protectora de Animales"));
-
-app.listen(3000, () => console.log("Server ready on port 3000."));
-
-// module.exports = app;
-
-
+const port = process.env.PORT || 3000;
+const connection = require('./db/connection');
 
 // Middleware para parsear el cuerpo de las solicitudes como JSON
 app.use(express.json());
@@ -27,6 +18,15 @@ app.use('/animales', animalesRoutes);
 app.use('/adopciones', adopcionesRoutes);
 app.use('/eventos', eventosRoutes);
 
+app.get("/", (req, res)=>{
+    res.send("Sociedad Protectora de Animales");
+});
 
+console.log("Sociedad Protectora de Animales");
+
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});
 
 module.exports = app; // Exportar la aplicación para pruebas o uso externo
