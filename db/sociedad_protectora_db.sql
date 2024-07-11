@@ -32,7 +32,7 @@ CREATE TABLE `adopciones` (
   KEY `animal_id` (`animal_id`),
   CONSTRAINT `adopciones_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`),
   CONSTRAINT `adopciones_ibfk_2` FOREIGN KEY (`animal_id`) REFERENCES `animales` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `adopciones` (
 
 LOCK TABLES `adopciones` WRITE;
 /*!40000 ALTER TABLE `adopciones` DISABLE KEYS */;
+INSERT INTO `adopciones` VALUES (1,1,1,'2021-12-21'),(2,3,2,'2021-12-21'),(3,3,3,'2021-12-21'),(4,3,4,'2021-12-21'),(5,2,5,'2021-12-21');
 /*!40000 ALTER TABLE `adopciones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +61,7 @@ CREATE TABLE `animales` (
   `descripcion` text,
   `fecha_ingreso` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +70,7 @@ CREATE TABLE `animales` (
 
 LOCK TABLES `animales` WRITE;
 /*!40000 ALTER TABLE `animales` DISABLE KEYS */;
-INSERT INTO `animales` VALUES (1,'NINA','canino','mestizo','2 meses','Cachorra en adopción. Porte mediano/grande. Esta bebe fue abandonada en una zona de sobrepoblación, actualmente unos vecinos le acercan comida ,pero no puede estar solita y corriendo peligro. Es una cachorra muy dulce .','2029-06-24'),(2,'BLANQUITO','felino','mestizo','50 días','Gatito en adopción. Se debe tener extremo cuidado con la exposición del sol ya que son propensos al cáncer en orejitas y nariz si no se los cuida. Es una gatita dulce y juguetona que disfruta de la compañía humana. Necesita un hogar y mucho cariño.','2020-03-24'),(3,'NEGRITO','canino','mestizo','5 años','Super compañero, va con vos a todos lados. No hace ruido alguno, especial para departamento. Come alimento y lo que sea que le des, no es exquisito. Le gusta mucho jugar con otros perros. Es porte pequeño a mediano. Duerme en cualquier rinconcito.','2010-06-24'),(4,'HAZEL','canino','mestizo','6 años','Es viejita, de tamaño mediano y tiene un tumor en el pecho, esta bajo tratamiento. A pesar de su condición, sigue siendo una perrita cariñosa y leal. Necesita un hogar donde puedan darle la atención médica que requiere y mucho amor.','2002-04-24'),(5,'GARDFIELD','felino','mestizo','25 días','Gatito en adopción responsable. Compromiso de castración y seguimiento. Se requiere un compromiso especial para alimentarlo y mantenerlo caliente, ya que es muy pequeño. Será un compañero leal y agradecido','2029-06-24'),(6,'GRETA','canino','mestizo','8 años','Perrita de porte pequeño. Es mimoso, juguetón y adora que lo acaricien. Hace sus necesidades afuera y se lleva bien con otros perritos. Está vacunada y lista para encontrar una familia que la llene de amor. Es perfecta para cualquier hogar.','2015-01-24'),(7,'GATITOS','felino','mestizo','10 dias','Estos cuatro gatitos, con cinco dias de nacidos necesitan adoptantes y mucho cuidado. Su mamá falleció, dejándolos vulnerables. Requieren alimentación especial y cuidados constantes para asegurar su completo bienestar.','2028-06-24'),(8,'TIGRE','felino','mestizo','5 años','Este hermoso minino fue abandonado hace tres años por las personas que tanto queria, se mudaron y él quedo solito sin saber que paso. Recientemente los vecinos lo curaron de una infeccion que tenia en el cuello. Es muy cariñoso y compañero.','2025-04-24');
+INSERT INTO `animales` VALUES (1,'NINA','canino','mestizo','2 meses','Cachorra en adopción. Porte mediano/grande. Esta bebe fue abandonada en una zona de sobrepoblación, actualmente unos vecinos le acercan comida ,pero no puede estar solita y corriendo peligro. Es una cachorra muy dulce .','2029-06-24'),(2,'BLANQUITO','felino','mestizo','40 días','Gatita en adopción. Se debe tener extremo cuidado con la exposición del sol ya que son propensos al cáncer en orejitas y nariz si no se los cuida. Es una gatita dulce y juguetona que disfruta de la compañía humana. Necesita un hogar y mucho cariño.',NULL),(3,'NEGRITO','canino','mestizo','5 años','Super compañero, va con vos a todos lados. No hace ruido alguno, especial para departamento. Come alimento y lo que sea que le des, no es exquisito. Le gusta mucho jugar con otros perros. Es porte pequeño a mediano. Duerme en cualquier rinconcito.','2010-06-24'),(4,'HAZEL','canino','mestizo','6 años','Es viejita, de tamaño mediano y tiene un tumor en el pecho, esta bajo tratamiento. A pesar de su condición, sigue siendo una perrita cariñosa y leal. Necesita un hogar donde puedan darle la atención médica que requiere y mucho amor.','2002-04-24'),(5,'GARDFIELD','felino','mestizo','25 días','Gatito en adopción responsable. Compromiso de castración y seguimiento. Se requiere un compromiso especial para alimentarlo y mantenerlo caliente, ya que es muy pequeño. Será un compañero leal y agradecido','2029-06-24'),(6,'GRETA','canino','mestizo','7 años','Perrita de porte pequeño. Es mimoso, juguetón y adora que lo acaricien. Hace sus necesidades afuera y se lleva bien con otros perritos. Está vacunada y lista para encontrar una familia que la llene de amor. Es perfecta para cualquier hogar.',NULL),(7,'GATITOS','felino','mestizo','10 dias','Estos cuatro gatitos, con cinco dias de nacidos necesitan adoptantes y mucho cuidado. Su mamá falleció, dejándolos vulnerables. Requieren alimentación especial y cuidados constantes para asegurar su completo bienestar.','2028-06-24'),(8,'TIGRE','felino','mestizo','5 años','Este hermoso minino fue abandonado hace tres años por las personas que tanto queria, se mudaron y él quedo solito sin saber que paso. Recientemente los vecinos lo curaron de una infeccion que tenia en el cuello. Es muy cariñoso y compañero.','2025-04-24'),(9,'prueba','prueba','prueba','prueba','prueba',NULL),(10,'prueba1','prueba1','prueba1','prueba1','prueba1',NULL),(11,'prueba2','prueba2','prueba2','prueba2','prueba2',NULL),(12,'prueba3','prueba3','prueba3','prueba3','prueba3',NULL),(13,'PRUEBA4','PRUEBA4','PRUEBA4','5','PRUEBA4','2023-07-10');
 /*!40000 ALTER TABLE `animales` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +88,7 @@ CREATE TABLE `eventos` (
   `fecha` date DEFAULT NULL,
   `lugar` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,6 +97,7 @@ CREATE TABLE `eventos` (
 
 LOCK TABLES `eventos` WRITE;
 /*!40000 ALTER TABLE `eventos` DISABLE KEYS */;
+INSERT INTO `eventos` VALUES (1,'castración felina','Se realizará castración felina','2021-12-21','Veterinaria Patitas Felices'),(2,'castración canina','Se realizará castración felina','2021-12-21','Veterinaria Patitas Felices'),(3,'peluquería','Se realizará peluquería canina','2021-12-21','Veterinaria Happy Paws'),(4,'vacunación','Se realizará vacunación antirrábica','2021-12-21','Veterinaria Happy Paws'),(5,'aaaaaaaaaa','aaaaaaaaaaa','2021-12-21','aaaaaaaaaaaaa'),(6,'bbbbbbbbbb','bbbbbbbbbbb','2021-12-21','bbbbbbbbbbbbb');
 /*!40000 ALTER TABLE `eventos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +115,7 @@ CREATE TABLE `usuarios` (
   `password` varchar(20) DEFAULT NULL,
   `fecha_registro` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +124,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (2,'Cristina Guevara','cris@cris.com','12345','2020-07-29 03:00:00'),(3,'Micaela Aranibar','mica@mica.com','12345','2021-04-02 03:00:00'),(4,'Cecilia Cruz','ceci@ceci.com','12345','2023-08-21 03:00:00');
+INSERT INTO `usuarios` VALUES (1,'Cristina Guevara','cris@cris.com','12345','2020-07-29 03:00:00'),(2,'Cecilia Cruz','ceci@ceci.com','12345','2023-08-21 03:00:00'),(3,'Micaela Aranibar','mica@mica.com','12345','2021-12-21 03:00:00'),(4,'test','test@test.com','12345','2021-12-21 03:00:00'),(5,'testing','testing@testing.com','12345','2021-12-21 03:00:00'),(6,'testeando','testeando@testeando.com','12345','2021-12-21 03:00:00'),(7,'test1','test1@test1.com','12345','2021-12-21 03:00:00');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -135,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-07-01  2:28:32
+-- Dump completed on 2024-07-10 21:23:07
